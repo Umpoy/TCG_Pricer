@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "TCG Pricer",
+  "version": "1.0.0",
+  "description": "Price floor enforcer for TCGPlayer pricing page",
+  "content_scripts": [
+    {
+      "matches": ["https://store.tcgplayer.com/admin/pricing*"],
+      "js": ["content.js"],
+      "world": "MAIN"
+    }
+  ]
+}
