@@ -13,7 +13,6 @@ function handleSearch() {
 
   results.innerHTML = '<p class="placeholder">Loading...</p>';
 
-  // Send message to background to fetch price data
   chrome.runtime.sendMessage({ type: "FETCH_PRICE", cardName: query }, (response) => {
     if (chrome.runtime.lastError) {
       showError("Extension error. Please try again.");
